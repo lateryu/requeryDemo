@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>common</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+    .header {
+        height: 50px;
+        border: 1px solid #ccc;
+    }
+    
+    .header_main {
+        width: 2000px;
+        margin: 0px auto;
+        height: 50px;
+    }
+    
+    .logo_wrap a {
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+        background: #ccc;
+        display: block;
+    }
+    
+    .left {
+        width: 200px;
+        float: left;
+    }
+    
+    .right {
+        padding: 15px;
+        float: left;
+    }
+    
+    .breadcrumb {
+        margin: 10px 0;
+    }
+    .content{
+        width:1000px;
+        margin:0px auto;
+    }
+    
+    .aaa {
+        height: 200px;
+        background: red;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="js/layui/layui/css/layui.css">
+    <script data-main="js/app.js" src="require.js"></script>
+    <script type="text/javascript" src="js/layui/layui/layui.js"></script>
+    <script>
+    layui.config({
+        base: 'js/' //你的模块目录
+    }).use('app'); //加载入口
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_main">
+            <div class="logo_wrap">
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="left">
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">首页</a>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">默认展开</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">选项1</a></dd>
+                        <dd><a href="javascript:;">选项2</a></dd>
+                        <dd><a href="">跳转</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">解决方案</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">移动模块</a></dd>
+                        <dd><a href="">后台模版</a></dd>
+                        <dd><a href="">电商平台</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">解决方案</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">移动模块</a></dd>
+                        <dd><a href="">后台模版</a></dd>
+                        <dd><a href="">电商平台</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">解决方案</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">移动模块</a></dd>
+                        <dd><a href="">后台模版</a></dd>
+                        <dd><a href="">电商平台</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">产品</a></li>
+                <li class="layui-nav-item"><a href="">大数据</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="breadcrumb">
+                <span class="layui-breadcrumb">
+                    <a href="">首页</a>
+                    <a href="">国际新闻</a>
+                    <a href="">亚太地区</a>
+                    <a><cite>正文</cite></a>
+                </span>
+            </div>
+            <div class="content">
+                <form class="layui-form">
+                <!-- 提示：如果你不想用form，你可以换成div等任何一个普通元素 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">输入框</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="text" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">下拉选择框</label>
+                    <div class="layui-input-block">
+                        <select name="interest" lay-filter="aihao" name="select">
+                            <option value="0">写作</option>
+                            <option value="1">阅读</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">复选框</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="like[write]" title="写作" name="aa1">
+                        <input type="checkbox" name="like[read]" title="阅读" name="aa">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">开关关</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" lay-skin="switch" name="check">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">开关开</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" checked lay-skin="switch" name="check">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">单选框</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="sex" value="0" title="男">
+                        <input type="radio" name="sex" value="1" title="女" checked>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">请填写描述</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="请输入内容" class="layui-textarea" name="memo"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="submit">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+                <!-- 更多表单结构排版请移步文档左侧【页面元素-表单】一项阅览 -->
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
